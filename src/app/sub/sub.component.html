@@ -1,0 +1,35 @@
+<div class="container">
+
+  <mat-card class="card">
+
+    <div>
+      <h1>Gamimate</h1>
+    </div>
+
+    <div class="number">
+      <mat-card>
+        {{x}}
+      </mat-card>
+
+      <mat-card style="background-color: transparent;font-size: large;">
+        -
+      </mat-card>
+
+      <mat-card>
+        {{y}}
+      </mat-card>
+
+    </div>
+
+    <div style="margin-top: 20px;display: flex;align-items: center; flex-direction: column;">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Digite a resposta</mat-label>
+        <input matInput [(ngModel)]="meuInput" type="number">
+      </mat-form-field>
+      <div>
+        <button mat-button class="opcao" (click)="minhaFuncao(meuInput)">Enviar Resposta</button>
+      </div>
+    </div>
+  </mat-card>
+
+</div>

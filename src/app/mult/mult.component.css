@@ -16,6 +16,10 @@
   justify-content: center;
 }
 
+.number{
+  display: flex;
+  flex-direction: row;
+}
 .mat-button {
   margin-top: 20px;
 }
