@@ -24,17 +24,19 @@ export class DivComponent implements OnInit {
 
   gerarValor() {
     this.x = Math.floor(Math.random() * 100);
-    this.y = Math.floor(Math.random() * 100);
-    this.valorTotal = this.x / this.y
+    this.y = Math.floor(Math.random() * 10);
+    this.y = this.y == 0 ? 1 : this.y
+    this.valorTotal = Math.floor(this.x / this.y)
   }
 
   minhaFuncao(value: number) {
-    if (this.valorTotal == value) {
+    if (this.valorTotal == Math.floor(value)) {
       this.pontos += 1
       this.gerarValor()
     } else {
       this.openDialog()
     }
+    this.meuInput = null
   }
 
   openDialog(): void {

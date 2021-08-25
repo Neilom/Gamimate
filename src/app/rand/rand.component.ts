@@ -29,7 +29,6 @@ export class RandComponent implements OnInit {
     this.x = Math.floor(Math.random() * 100);
     this.y = Math.floor(Math.random() * 100);
     this.sinal = this.operadores[this.getRandomArbitrary(0, 3)]
-    console.log(this.sinal)
     switch (this.sinal) {
       case "+":
         this.valorTotal = this.x + this.y
@@ -38,7 +37,7 @@ export class RandComponent implements OnInit {
         this.valorTotal = this.x - this.y
         break;
       case "/":
-        this.valorTotal = this.x / this.y
+        this.valorTotal = Math.floor(this.x / this.y)
         break;
       case "*":
         this.valorTotal = this.x * this.y
@@ -53,12 +52,14 @@ export class RandComponent implements OnInit {
   }
 
   minhaFuncao(value: number) {
-    if (this.valorTotal == value) {
+    if (this.valorTotal == Math.floor(value)) {
       this.pontos += 1
       this.gerarValor()
     } else {
       this.openDialog()
     }
+    this.meuInput = null
+
   }
 
   openDialog(): void {

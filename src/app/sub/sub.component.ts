@@ -36,6 +36,7 @@ export class SubComponent implements OnInit {
     } else {
       this.openDialog()
     }
+    this.meuInput = null
   }
 
   openDialog(): void {

@@ -40,6 +40,8 @@ export class SomaComponent implements OnInit {
     } else {
       this.openDialog()
     }
+    this.meuInput = null
+
   }
 
   openDialog(): void {
